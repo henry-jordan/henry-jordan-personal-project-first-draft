@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;300;400;500&family=Noto+Sans:wght@200;300;400&display=swap');
+@import './styles/assignment.css';
+@import './styles/chat.css';
+@import './styles/home.css';
+
+body{
+    all:unset;
+    background-color: #282828;
+    color: white;
+    font-family:'Lexend', sans-serif;
+    font-weight: 200;
+    margin-top: 0;
+    overflow: hidden;
+}
+main{
+    display: flex;
+    flex-direction: row;
+}

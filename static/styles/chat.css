@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;300;400;500&family=Noto+Sans:wght@200;300;400&display=swap');
+* {
+    font-family: 'Libre Franklin', sans-serif;
+    box-sizing: border-box;
+}
+p {
+    margin: 0;
+}
+.content{
+    position: relative;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.chat-input-wrapper{
+    position: absolute;
+    bottom: 20px;
+    width: 90vw;
+
+}
+.chat-input-container{
+    position: relative;
+    left: 5vw;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    gap: 8px;
+    width: 80vw;
+    overflow-y: auto;
+    max-height: 195px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+}
+#chat-input{
+    resize: none;
+    transform: translateY(1px);
+    font-weight: 300;
+    color: white;
+    box-sizing: border-box;
+    overflow-y: auto;
+    opacity: .9;
+    background: none;
+    border: 0px;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+}
+.array-wrapper{
+    position: relative;
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 88vh;
+    margin-bottom: 78px;
+}
+.message-array{
+    padding: 8px;
+    width: 82vw;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    gap: 8px;
+}
+.user-message-container{
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+}
+.user-message{
+    /* align-self: flex-end; */
+    font-weight: 400;
+    font-size: 13px;
+    background-color: #4266E7;
+    width: fit-content;
+    padding: 10px;
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px 4px 0px 4px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+}
+.message-text{
+    outline: none !important;
+}
+.user-message-options{
+    padding-top: 6px;
+}
+.edit-message-button{
+    background:none;
+    border: 0px;
+    opacity: .7;
+    display: none;
+}
+.edit-message-button:hover{
+    opacity: .9;
+}
+.edit-message-button:active{
+    opacity: 0.7;
+    transform: translateY(2px);
+}
+.user-message-container:hover .edit-message-button{
+    display: block;
+}
+.engine-message-container{
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.engine-message{
+    font-weight: 400;
+    background-color: #333;
+    align-self: flex-start;
+    width: fit-content;
+    padding: 10px;
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px 4px 4px 0px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+}
+.engine-message-options{
+    padding-top: 6px;
+}
+.regenerate-message-button{
+    background:none;
+    border: 0px;
+    opacity: .7;
+    display: none;
+}
+.engine-message-container:hover .regenerate-message-button{
+    display: block;
+}
+.regenerate-message-button:hover{
+    opacity: .9;
+}
+.regenerate-message-button:active{
+    opacity: 0.7;
+    transform: translateY(2px);
+}
+.message-text{
+    word-wrap: break-word;
+    font-weight: 300;
+    max-width: 70vw;
+    font-size: 16px;
+    line-height: normal;
+}
+.awaiting-response-message{
+    font-weight: 400;
+    background-color: #333;
+    align-self: flex-start;
+    width: fit-content;
+    padding: 10px;
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px 4px 4px 0px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+}
+.awaiting-response-text{
+    word-wrap: break-word;
+    font-weight: 300;
+    width: 20px;
+    font-size: 16px;
+    line-height: normal;
+}
+
+#chat-input:focus{
+    outline: none !important;
+}
+#chat-submit{
+    background-color: #4266E7;
+    color: white;
+    border: 0px;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    font-weight: 300;
+    align-self: flex-end;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+}
+#submit-icon{
+    transform: translate(-0.3px, 1.6px);
+}
+#chat-submit:hover{
+    filter: brightness(0.8);
+}
+#chat-submit:active{
+    transform: translateY(2px);
+    filter: brightness(0.7);
+}
+.message-edit-options{
+    position: relative;
+    bottom: 83px;
+    display: none;
+}
+.message-edit-confirm{
+    background-color: #4266E7;
+    color: white;
+    border: 0px;
+    border-radius: 4px;
+    padding: 8px;
+    font-weight: 500;
+    font-size: 15px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+}
+.message-edit-confirm:hover{
+    filter: brightness(0.8);
+}
+.message-edit-confirm:active{
+    filter: brightness(0.7);
+    transform: translateY(2px);
+}
+.message-edit-cancel{
+    background-color: #333;
+    color: white;
+    border: 0px;
+    border-radius: 4px;
+    padding: 8px;
+    font-weight: 500;
+    font-size: 15px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+}
+.message-edit-cancel:hover{
+    filter: brightness(0.8);
+}
+.message-edit-cancel:active{
+    filter: brightness(0.7);
+    transform: translateY(2px);
+}
+.message-edit-options.show{
+    display:block;
+}
+.dot-flashing {
+    position: relative;
+    width: 6px;
+    height: 6px;
+    border-radius: 5px;
+    color: white;
+    background-color: white;
+    animation: dot-flashing 1s infinite linear alternate;
+    animation-delay: 0.5s;
+    transform: translateX(-10px);
+  }
+  .dot-flashing::before, .dot-flashing::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  .dot-flashing::before {
+    left: -10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 5px;
+    color: white;
+    background-color: white;
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 0s;
+  }
+  .dot-flashing::after {
+    left: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 5px;
+    color: white;
+    background-color: white;
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 1s;
+  }
+  
+  @keyframes dot-flashing {
+    0% {
+      background-color: white;
+    }
+    50%, 100% {
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
